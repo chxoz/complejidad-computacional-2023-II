@@ -27,6 +27,7 @@ else:
         str_c = str(lines[2]).replace('\\',"").replace("\n", "")
         list_c = str_c.split("%")
         l_c = len(list_c)
+        print(list_c)
         print("el numero de miembros de c es: " + str(l_c))
         
     if k in large_string:
