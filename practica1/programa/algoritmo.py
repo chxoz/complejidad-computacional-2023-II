@@ -41,15 +41,28 @@ else:
             list_c = str_c.split("%") 
             #auxiliar para guardar los valores de c1 en el ciclo for
             aux_c1 = ''
-            #auxiliar para guardar los valores de c1 en el ciclo for
+            #auxiliar para guardar los valores de c2 en el ciclo for
             aux_c2 = ''
+            #variable para mutar dentro de la condicional del segundo for
             c1 = ''
+            #variable para mutar dentro de la condicional del segundo for
             c2 = ''
+            #auxiliar para hacer un rango dinamico en el range del for anidado
             l=0
+            #auxiliar para guardar si hay solucion para el ejemplar o no
             equal = ''
+            #variable para el rango 
             length_c = len(list_c)
+            #cilo for que fija el primer subconjunto de c para comparar con los siguientes
             for i in range(0,length_c):
+                #variable que guarda el subconjunto en la posicion i
                 aux_c1 = list_c[i]
+                #lista con elementos 'x'  con x un valor numerico hecho cadena
+                list_c1 = aux_c1.split(",")
+                #lista que se pasa a int para poder hacer un sort
+                int_c1 = [int(x) for x in list_c1]
+                #lista ordenada
+                int_c1.sort()
                 l+=1
                 for j in range(l,length_c):
                     aux_c2 = list_c[j]
