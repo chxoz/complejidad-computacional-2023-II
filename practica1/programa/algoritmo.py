@@ -35,6 +35,8 @@ else:
             str_s = str(lines[1]).replace('$',"").replace("\n", "")
             #hacemos una lista con los elementos de S
             list_s = str_s.split(",")
+            int_s = [int (x) for x in list_s]
+            int_s.sort()
             #limpiamos la cadena que contiene al conjunto C
             str_c = str(lines[2]).replace('\\',"").replace("\n", "")
             #hacemos una lista con los elementos de C
@@ -67,10 +69,15 @@ else:
                 for j in range(l,length_c):
                     aux_c2 = list_c[j]
                     aux_cover = aux_c1 + "," + aux_c2
-                    aux_cover_reverse = aux_c2 + "," + aux_c1
-                    cover_reverse = aux_cover_reverse.split(",")
+                    #aux_cover_reverse = aux_c2 + "," + aux_c1
+                    #cover_reverse = aux_cover_reverse.split(",")
                     cover = aux_cover.split(",")
-                    if cover == list_s or cover_reverse == list_s: 
+                    int_cover = [int (x) for x in cover]
+                    int_cover.sort()
+                    print(int_s)
+                    print("++++++++++++++++++++")
+                    print(int_cover)
+                    if int_cover == int_s: 
                         equal = 1
                         c1 = aux_c1
                         c2 = aux_c2
