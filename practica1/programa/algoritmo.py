@@ -34,6 +34,8 @@ else:
             list_c = str_c.split("%") 
             aux_c1 = ''
             aux_c2 = ''
+            c1 = ''
+            c2 = ''
             l=0
             equal = ''
             length_c = len(list_c)
@@ -46,10 +48,12 @@ else:
                     cover = aux_cover.split(",")
                     if cover == list_s: 
                         equal = 1
+                        c1 = aux_c1
+                        c2 = aux_c2
             if equal == 1:            
                 print("SI")
                 print("S = " + str(list_s).replace("[","{").replace("]","}"))
-                print("c1 = {" + str(aux_c1) + "}\n" + "c2 = {" + "" +str(aux_c2)+"}")            
+                print("c1 = {" + str(c1) + "}\n" + "c2 = {" + "" +str(c2)+"}")            
             else: 
                 print("NO")    
     else:
