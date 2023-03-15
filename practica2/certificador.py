@@ -61,7 +61,7 @@ else: #si el archivo que nos dio es valido entonces se hacen los pasos del punto
     certificado=""
     l=0
     while(l<len(arreglo)):
-     certificado+=str(arreglo[l])+","
+     certificado+=str(int(arreglo[l]))+","
      l+=1
     
     
