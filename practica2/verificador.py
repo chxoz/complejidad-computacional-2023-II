@@ -1,6 +1,20 @@
-file_entrada = str(input("Puedes escoger entre los siguientes archivos:\n"+
-                     "ej1 \nej2\nej3"+"\nArchivo:"))# le pedimos al usuario un nombre de archivo
-file_cer=str(input("Escribe el archivo donde tienes el certificado:"));
+file_entrada = str(input("Escribe con que ejemplar quieres trabajar\n"+
+                         "Puedes escoger entre los siguientes archivos:\n"+
+                         "ej1 \nej2\nej3"+"\nArchivo:"))# le pedimos al usuario un nombre de archivo
+
+if file_entrada=="ej1":
+   certificados="cer1 \ncer2\ncer3\ncer4\ncer5"+"\nArchivo:"
+
+if file_entrada=="ej2":
+   certificados="cer6 \ncer7\ncer8\ncer9\ncer10"+"\nArchivo:"
+
+if file_entrada=="ej3":
+   certificados="cer11 \ncer12\ncer13\ncer14\ncer15"+"\nArchivo:"   
+
+file_cer=str(input("Escribe el archivo donde tienes el certificado\n"
+                   +"Puedes escoger entre los siguientes archivos:\n"+
+                   certificados))
+
 try:#manejamos la ecepcion en caso de que no se ingrese un archivo existente
     with open(file_entrada + ".txt") as f_obj:#abrimos nuestro archivo a codificar
         lines = f_obj.readlines()#leemos todo el contenido del archivo
