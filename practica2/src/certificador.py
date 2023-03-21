@@ -25,9 +25,10 @@ else: #si el archivo que nos dio es valido entonces se hacen los pasos del punto
             aux = l - 5 #auxiliar para el indice de los ultimos elementos
             first = list_s[0:5]
             last = list_s[aux:l]
-            print("los primeros 5 y los ultimos 5 elementos de S son :" + str(first) + str(last))
+            print("Los primeros 5 y los ultimos 5 elementos de S son :" + str(first) + str(last))
         else:#si es menor a 11 se imprimen todos los elementos de S
-            print("elementos del conjunto S: "+ str(list_s))
+            print("Elementos del conjunto S: "+ str(list_s))
+        print("El numero de miembros de S es: "+ str(len(list_s)))    
     else: 
         print("No se encontro el conjunto S en la codificacion")
     if c in large_string:#si \\ esta en la cadena estamos por leer el conjunto C
@@ -36,13 +37,13 @@ else: #si el archivo que nos dio es valido entonces se hacen los pasos del punto
         l_c = len(list_c)#auxiliar para la longitud
         
     
-        print("el numero de miembros de c es: " + str(l_c))
+        print("El numero de miembros de c es: " + str(l_c))
     else:
-        print("no se encontro el conjunto c en la codificacion")   
+        print("No se encontro el conjunto c en la codificacion")   
     if k in large_string:# si # esta en la cadena estamos por leer el valor de K
         print("Valor de K = " + str(lines[0].replace('#' ,"")))
     else:
-        print("no se encontro el valor de K en la codificacion")
+        print("No se encontro el valor de K en la codificacion")
     
     f_obj.close()
    
